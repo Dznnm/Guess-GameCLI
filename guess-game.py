@@ -19,12 +19,16 @@ else:
     exit()
 
 while attempts > 0:
+    user_input = input("Guess the number! or type 'exit' to quit: ").lower()
+    if user_input == "exit":
+        print("Exiting the game. Goodbye!")
+        break
     try:
-        guess = int(input("Guess the number!: "))
+        guess = int(user_input)
     except ValueError:
         print("Please enter a number between 1 and 20.")
         continue
-    if guess < 1 or guess > 20:
+    if not (1 <= guess <= 20):
         print("Please enter a number between 1 and 20.")
         continue
     if guess < number_to_guess:

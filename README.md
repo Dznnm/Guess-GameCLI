@@ -8,55 +8,64 @@ https://roadmap.sh/projects/number-guessing-game
 
 ## Description
 
-This game generates a random number and challenges the player to guess it within a limited number of attempts.
+The computer generates a random number, and the player must guess it before running out of attempts.
 
 Players can choose between three difficulty levels:
 
-* Easy: 10 attempts
-* Medium: 7 attempts
-* Hard: 5 attempts
+| Difficulty | Attempts | Number Range |
+| ---------- | -------- | ------------ |
+| Easy       | 10       | 1–20         |
+| Medium     | 7        | 1–20         |
+| Hard       | 5        | 1–20         |
 
-The game provides feedback after each guess:
+After each guess, the game provides feedback indicating whether the guess is too high or too low.
 
-* Too high
-* Too low
-* Correct guess
+The player wins by guessing the correct number before running out of attempts.
 
-The game also validates user input to prevent crashes caused by invalid entries.
+---
 
 ## Features
 
 * Random number generation
-* Multiple difficulty levels
-* Input validation
-* Remaining attempts counter
+* Three difficulty levels
+* Limited attempts based on difficulty
+* Higher / Lower hints
+* Input validation for non-numeric values
+* Range validation (1–20)
+* Exit command (`exit`)
 * Win and lose conditions
-* Helpful feedback after each guess
+* Remaining attempts counter
+
+---
 
 ## Technologies Used
 
 * Python 3
 * Random module
 
+---
+
 ## How to Run
 
-1. Clone the repository:
+Clone the repository:
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/<your-username>/<repository-name>.git
 ```
 
-2. Navigate to the project folder:
+Navigate to the project directory:
 
 ```bash
-cd number-guessing-game
+cd <repository-name>
 ```
 
-3. Run the program:
+Run the program:
 
 ```bash
 python number_guessing_game.py
 ```
+
+---
 
 ## Example Gameplay
 
@@ -67,29 +76,57 @@ Enter your Difficulty (Easy, Medium, Hard): medium
 
 You have 7 attempts to guess a number between 1 and 20.
 
-Guess the number!: 10
+Guess the number! or type 'exit' to quit: 10
 Too low! Try again.
 You have 6 attempts left.
 
-Guess the number!: 15
+Guess the number! or type 'exit' to quit: 15
 Too high! Try again.
 You have 5 attempts left.
 
-Guess the number!: 13
+Guess the number! or type 'exit' to quit: 13
 Congratulations! You've guessed the number!
 ```
 
+---
+
+## Exit Example
+
+```text
+Guess the number! or type 'exit' to quit: exit
+
+Exiting the game. Goodbye!
+```
+
+---
+
 ## Learning Objectives
 
-This project helped practice:
+This project was built to practice:
 
 * Variables
 * User input
 * Conditional statements
 * Loops
 * Exception handling
-* Game state management
+* State management
+* Input validation
 * Random number generation
+
+---
+
+## Future Improvements
+
+Potential enhancements:
+
+* Play Again feature
+* Score tracking
+* Difficulty settings using dictionary mapping
+* Custom number ranges
+* Best score leaderboard
+* Function-based refactoring
+
+---
 
 ## Author
 
